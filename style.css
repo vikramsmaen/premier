@@ -58,3 +58,18 @@ body {
 	width: 10%;
     
 }
+
+#hero{
+	background-color: red;
+	width: 100%;
+	height: 90%;
+	padding: 3vw;
+	position: relative;
+}
+
+#video{
+	width: 100%;
+    height: 100%;
+	background-color: blue;
+	position: relative;
+}
