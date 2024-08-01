@@ -37,7 +37,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    font-family: Monument;
+	font-family: Monument;
 	font-size: 3em;
 	letter-spacing: -0.2rem;
 }
@@ -50,16 +50,15 @@ body {
 	justify-content: center;
 	align-items: center;
 	border-right: 2px solid black;
-    font-size: 22px;
-    font-weight: 600;
+	font-size: 22px;
+	font-weight: 600;
 }
 
 #nav h2:nth-last-child(1) {
 	width: 10%;
-    
 }
 
-#hero{
+#hero {
 	background-color: red;
 	width: 100%;
 	height: 90%;
@@ -67,9 +66,36 @@ body {
 	position: relative;
 }
 
-#video{
+#video {
 	width: 100%;
-    height: 100%;
+	height: 100%;
 	background-color: blue;
 	position: relative;
+}
+
+#video video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#overlay {
+	width: 100%;
+	height: 40%;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: absolute;
+	bottom: 0;
+	color: #f8f8f8;
+	padding: 3vw;
+}
+
+#over1 {
+	position: absolute;
+	font-size: 2em;
+	display: flex;
+
+	justify-content: center;
+	align-items: center;
+
+	/* color: white; */
 }
