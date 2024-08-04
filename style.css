@@ -178,7 +178,9 @@ h2 {
     left: 100%;
     padding: 5px;
     animation: anime 10s linear infinite;
-    animation-delay: calc(10s / var(--quantity) * (var(--quantity) - var(--position)) * -1);
+    animation-delay: calc(
+      10s / var(--quantity) * (var(--quantity) - var(--position)) * -1
+    );
     display: flex;
     align-items: center;
     justify-content: center;
@@ -669,22 +671,20 @@ h2 {
 }
 
 /* FEATURED 2 END */
-
-/* MARQUE TEXT START */
-.scroll-wrapper{
-
+/* 
+MARQUE TEXT START
+.scroll-wrapper {
   border: 1px solid black;
   width: 95%;
   max-width: 120%;
   margin-inline: auto;
   position: relative;
   height: 100px;
-  /* margin-top: 5px; */
-  overflow: hidden;
-  /* background-color: red; */
-  /* min-width: 90%; */
-  min-width: 90%;
   
+  overflow: hidden;
+ 
+  
+  min-width: 90%;
 
   mask-image: linear-gradient(
     to right,
@@ -692,28 +692,22 @@ h2 {
     black 20% 80%,
     transparent
   );
-  
-  
 
-
-
-  .item{
+  .item {
     width: var(--width);
     height: 100%;
-    /* background-color: blue; */
+    
     border-radius: 5px;
     position: absolute;
     left: max(calc(var(--width) * var(--quantity)), 100%);
     animation: scroll 20s linear infinite;
-    animation-delay: calc(20s / var(--quantity) * (var(--quantity) - var(--positionn)) * -1) ;
+    animation-delay: calc(
+      20s / var(--quantity) * (var(--quantity) - var(--positionn)) * -1
+    );
     align-content: center;
-
-
-    
   }
 
-
-  h1{
+  h1 {
     font-size: 5em;
     color: white;
     padding-top: 6px;
@@ -723,28 +717,74 @@ h2 {
     letter-spacing: 3px;
     -webkit-text-stroke: 1px black;
     -webkit-text-fill-color: rgba(250, 235, 215, 0);
-    
   }
-
-
 }
 
-.scroll-wrapper:hover .item{
+.scroll-wrapper:hover .item {
   animation-play-state: paused !important;
 }
 
-
-@keyframes scroll{
+@keyframes scroll {
   from {
-    left:100%;
-   }
-  to{
-    left:calc(var(--width) * -1);
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+} */
+
+/* MARQUE TEXT END */
+
+/* Text scroll test */
+
+#scrollright {
+  /* background-color: red; */
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0.5vw;
+  padding-top: 15px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20% 80%,
+    transparent
+  );
+
+  
+  h1 {
+    /* background-color: blue; */
+    display: inline-block;
+    margin-right: 20px;
+
+    font-size: 5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: rgba(250, 235, 215, 0);
+
+    animation: anime 10s linear infinite;
   }
 }
 
+#scrollright:hover h1 {
+  animation-play-state: paused;
+}
 
-/* MARQUE TEXT END */
+@keyframes anime {
+  from {
+    transform: translateX(calc(-100% - 24px));
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+/* text scroll end */
 
 /* FOOTER */
 
